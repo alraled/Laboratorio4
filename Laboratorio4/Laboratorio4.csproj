@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{76D0CDED-19AE-4548-9B2B-00D5F824E0E4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Laboratorio4</RootNamespace>
+    <AssemblyName>Laboratorio4</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\ContratacionFeature\ContratacionFeature.EventReceiver.cs">
+      <DependentUpon>ContratacionFeature.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Aprobado\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4f2d6735-eb76-4216-a61b-64ece25665e4}</SharePointProjectItemId>
+    </None>
+    <None Include="Equipo\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d80456f2-5361-4836-943f-2589ffcdc0ba}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\ContratacionFeature\ContratacionFeature.feature">
+      <FeatureId>{a21b3127-a009-4db1-a7e4-9dbe76aebb23}</FeatureId>
+    </None>
+    <None Include="Fin\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{30e47832-18d9-42d3-8270-8df4846f8fb9}</SharePointProjectItemId>
+    </None>
+    <None Include="Inicio\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dfbcf1e7-3685-4485-a5c7-5315b4cd9a5d}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Laboratorio4\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d98b503b-9e1e-497d-87da-907ca7fcc657}</SharePointProjectItemId>
+    </None>
+    <None Include="List1\List1Instance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{16fa6209-ccec-4661-9866-d01b43fc7b4f}</SharePointProjectItemId>
+    </None>
+    <None Include="List1\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9421ac0c-0709-4ff4-bfb1-a062e35e487e}</SharePointProjectItemId>
+    </None>
+    <None Include="Manager\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4dc4e767-8bdc-4139-9cff-f863cf73162d}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{039fe849-a132-4fb4-bf71-fa262cff6aa9}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Aprobado\Elements.xml" />
+    <Content Include="Equipo\Elements.xml" />
+    <Content Include="Features\ContratacionFeature\ContratacionFeature.Template.xml">
+      <DependentUpon>ContratacionFeature.feature</DependentUpon>
+    </Content>
+    <Content Include="Fin\Elements.xml" />
+    <Content Include="Inicio\Elements.xml" />
+    <Content Include="Laboratorio4\Elements.xml" />
+    <Content Include="List1\EditDlg.htm" />
+    <Content Include="List1\Elements.xml" />
+    <Content Include="List1\FileDlg.htm" />
+    <Content Include="List1\List1Instance\Elements.xml" />
+    <Content Include="List1\Repair.aspx" />
+    <Content Include="List1\Schema.xml" />
+    <Content Include="List1\Upload.aspx" />
+    <Content Include="Manager\Elements.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>
